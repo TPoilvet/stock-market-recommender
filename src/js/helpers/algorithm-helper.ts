@@ -34,10 +34,10 @@ const AlgorithmHelper = {
   /**
    * Standard algorithm function called by the setRecommandations method.
    *
-   * If the social media count goes up in a significant way (+25% of the 10 floating days average)
+   * If the social media count goes up in a significant way (+25% of the [period] floating days average)
    * and the daily value change is positive, the recommendation is to buy.
    *
-   * If the social media count goes up in a significant way (+25% of the 10 floating days average)
+   * If the social media count goes up in a significant way (+25% of the [period] floating days average)
    * and the daily value change is negative, the recommendation is to sell.
    *
    * The recommendation is to hold if not matching the aforementioned conditions.
@@ -77,7 +77,7 @@ const AlgorithmHelper = {
   /**
    * "Reversed Hype" algorithm function called by the setRecommandations method.
    *
-   * If the social media count goes up in a very unusual way (+60% of the 10 floating days average)
+   * If the social media count goes up in a very unusual way (+60% of the [period] floating days average)
    * the recommendation is to sell. Otherwise, the recommendation is to buy.
    *
    * @param history array of history days
