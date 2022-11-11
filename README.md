@@ -27,7 +27,7 @@ I am unfamiliar with most of the stock market ins and outs and created the appli
 
 Three algorithms have been implemented in the application, with the possibility for the user to change the active one on the fly.
 
-### Standard
+### Standard algorithm
 
 The following is assuming the user selected a period of 10 days.
 
@@ -35,14 +35,14 @@ The following is assuming the user selected a period of 10 days.
 - If the social media count goes up in a significant way (+25% of the 10 floating days average) and the daily value change is negative, the recommendation is to sell.
 - The recommendation is to hold if not matching the aforementioned conditions.
 
-### "Reversed Hype"
+### "Reversed Hype" algorithm
 
 The following is assuming the user selected a period of 10 days.
 
 - If the social media count goes up in a very unusual way (+60% of the 10 floating days average) the recommendation is to sell.
 - Otherwise, the recommendation is to buy.
 
-### "Oh God It's Friday"
+### "Oh God It's Friday" algorithm
 
 - Light modification of the Standard algorithm, the recommendation is to always sell right before the closing of the stock market on Friday.
 
