@@ -1,0 +1,74 @@
+@use "../variables" as v;
+
+.search-options {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 1.5rem;
+}
+
+.search-option-title {
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.search-option-required {
+  color: v.$PRIMARY;
+  margin-left: 0.5rem;
+  font-size: 0.75em;
+  text-transform: uppercase;
+}
+
+.search-option-control {
+  width: 100%;
+  padding: 0 0.5rem;
+  height: 2.25rem;
+  outline: none;
+  border-radius: 0.25rem;
+  border: 1px solid v.$SURFACE_5;
+  font-size: 1em;
+  transition: border-color 300ms;
+
+  &:focus {
+    border-color: v.$PRIMARY;
+  }
+}
+
+.search-social-field {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  outline: none;
+  border-radius: 0.25rem;
+  border: 1px solid v.$SURFACE_5;
+  height: 2.25rem;
+  overflow: hidden;
+
+  & > div {
+    border-right: 1px solid v.$SURFACE_5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 200ms;
+  }
+
+  & > div:not(.selected):hover {
+    background-color: v.$SURFACE_3;
+  }
+
+  & > div.selected {
+    background-color: v.$ACCENT_1;
+    color: white;
+  }
+
+  & > div:last-child {
+    border-right: 0;
+  }
+}
+
+.search-confirm {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,21 @@
+@use "../variables" as v;
+
+button {
+  background-color: v.$ACCENT_1;
+  color: v.$SURFACE_1;
+  border: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 300ms;
+
+  &:hover {
+    background-color: v.$PRIMARY;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

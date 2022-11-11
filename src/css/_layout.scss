@@ -1,0 +1,42 @@
+@use "variables" as v;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "PT Sans", "Segoe UI", Tahoma, sans-serif;
+  background-color: v.$SURFACE_2;
+  color: v.$TYPEFACE_1;
+  font-size: 1rem;
+
+  &.larger-text {
+    font-size: 1.25rem;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 1024px;
+}
+
+section {
+  margin-bottom: 1.25rem;
+  background-color: v.$SURFACE_1;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
+    drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}

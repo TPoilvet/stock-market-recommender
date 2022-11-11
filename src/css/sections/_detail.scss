@@ -1,0 +1,72 @@
+@use "../variables" as v;
+
+.detail-container {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  margin-top: 1.5rem;
+  gap: 1.5rem;
+}
+
+.history-chart {
+  display: flex;
+  align-items: flex-start;
+  height: 400px;
+  grid-column: span 3 / span 3;
+}
+
+.history-table {
+  border: 1px solid v.$SURFACE_5;
+  border-radius: 0.25rem;
+  border-spacing: 0;
+  border-collapse: separate;
+  overflow: hidden;
+  align-self: flex-start;
+  grid-column: span 4 / span 4;
+
+  & tr.closed {
+    background-color: v.$SURFACE_2;
+  }
+
+  & th,
+  & td {
+    padding: 0.5rem;
+    border-left: 1px solid v.$SURFACE_5;
+    border-top: 1px solid v.$SURFACE_5;
+    text-align: right;
+
+    &:first-child {
+      border-left: 0;
+      background-color: v.$SURFACE_2;
+    }
+
+    &.left-align {
+      text-align: left;
+    }
+  }
+
+  & th {
+    border-top: 0;
+    font-size: 0.75em;
+    text-transform: uppercase;
+  }
+
+  & td {
+    &.positive {
+      color: v.$PRIMARY;
+    }
+
+    &.negative {
+      color: v.$ACCENT_2;
+    }
+
+    &.neutral {
+      color: v.$TYPEFACE_2;
+    }
+  }
+}
+
+.history-table-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
